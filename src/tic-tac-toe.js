@@ -60,8 +60,31 @@ class TicTacToe {
 
     }
 
+    /**
+     * Check winner of the game by horizontal, vertical or diagonal matches.
+     * @returns {string} or {NULL}
+     */
     getWinner() {
+        for(var i = 0; i < 3; i++){
+            // Find horizontal matches
+            if(this.tiles[i][0] == this.tiles[i][1] && this.tiles[i][1] == this.tiles[i][2]){
+                return this.tiles[i][0];
+            }
+            // Find vertical matches
+            if(this.tiles[0][i] == this.tiles[1][i] && this.tiles[1][i] == this.tiles[2][i]){
+                return this.tiles[0][i];
+            }
+        }
 
+        // Find diagonal matches
+        if(this.tiles[0][0] == this.tiles[1][1] && this.tiles[0][0] == this.tiles[2][2]){
+            return this.tiles[0][0];
+        }
+        if(this.tiles[0][2] == this.tiles[1][1] && this.tiles[0][2] == this.tiles[2][0]){
+            return this.tiles[0][2];
+        }
+        // If matches weren't found return NULL
+        return null;
     }
 
     /**
