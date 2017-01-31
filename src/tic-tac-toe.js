@@ -76,8 +76,16 @@ class TicTacToe {
 
     }
 
+    /**
+     * Get value from tiles by passed indexes
+     * @param rowIndex
+     * @param colIndex
+     * @returns {null} or {string}
+     */
     getFieldValue(rowIndex, colIndex) {
-
+        if(this.tiles.length != 0){
+            return this.tiles[rowIndex][colIndex] === null ? null : this.tiles[rowIndex][colIndex];
+        }
     }
 }
 
