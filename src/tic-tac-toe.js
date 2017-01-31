@@ -56,8 +56,12 @@ class TicTacToe {
         }
     }
 
+    /**
+     * Check if it is a winner of the game or it is a draw
+     * @returns {boolean}
+     */
     isFinished() {
-
+        return this.getWinner() || this.isDraw() ? true : false;
     }
 
     /**
