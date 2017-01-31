@@ -7,8 +7,12 @@ class TicTacToe {
         this.player = 0;
     }
 
+    /**
+     * Get symbol of current player
+     * @returns {*|string}
+     */
     getCurrentPlayerSymbol() {
-
+        return this.symbols[this.player];
     }
 
     nextTurn(rowIndex, columnIndex) {
