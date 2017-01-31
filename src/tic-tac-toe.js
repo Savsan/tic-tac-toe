@@ -64,8 +64,12 @@ class TicTacToe {
 
     }
 
+    /**
+     * Check if no more turns
+     * @returns {boolean}
+     */
     noMoreTurns() {
-
+        return this.countOfTurns === 9;
     }
 
     isDraw() {
