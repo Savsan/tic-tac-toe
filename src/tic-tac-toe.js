@@ -95,8 +95,12 @@ class TicTacToe {
         return this.countOfTurns === 9;
     }
 
+    /**
+     * Check if it is a draw
+     * @returns {boolean}
+     */
     isDraw() {
-
+        return this.noMoreTurns() && !this.getWinner();
     }
 
     /**
